@@ -12,6 +12,12 @@ function Numbers (){
   // 8 <= x < 128
   console.log(Math.floor(Math.random()min * max))
 }
+// Comfirm yes/no include lowercase
+// comfirm yes/no uppercase
+// comfirm yes/no numeric
+// comfirm yes/special characters
+
+// generate password
 function writePassword() {
   var password = generatePassword(;
   var passwordText = document.querySelector("#password");
@@ -19,6 +25,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+// display alert  of what the password is
