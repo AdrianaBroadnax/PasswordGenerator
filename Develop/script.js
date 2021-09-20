@@ -10,8 +10,7 @@ function Numbers (){
   var min = 8
   var max = 128;
   // 8 <= x < 128
-  console.log(Math.floor(Math.random()min * max))
-  
+  console.log(Math.floor(Math.random() * max)) 
 }
 
 // Comfirm yes/no include lowercase
@@ -22,8 +21,11 @@ function Lowercase (){
     console.log(options[0]);
     alert(`Yes ${Password} ${generatePassword}`)
   }
-  if (option[1] === "No")
-  
+  if (option[1] === "No") {
+    console.log (options[1]);
+    alert(`No ${Password} ${generatePassword}`)
+  }
+
 }
 // comfirm yes/no uppercase
 // comfirm yes/no numeric
@@ -31,7 +33,7 @@ function Lowercase (){
 
 // generate password
 function writePassword() {
-  var password = generatePassword(;
+  var password = generatePassword(
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
