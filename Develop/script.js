@@ -22,7 +22,8 @@ function Lowercase (){
     console.log(options[0]);
     alert(`Yes ${Password} ${generatePassword}`)
   }
-  else 
+  if (option[1] === "No")
+  
 }
 // comfirm yes/no uppercase
 // comfirm yes/no numeric
