@@ -11,8 +11,19 @@ function Numbers (){
   var max = 128;
   // 8 <= x < 128
   console.log(Math.floor(Math.random()min * max))
+  
 }
+
 // Comfirm yes/no include lowercase
+function Lowercase (){
+  var Password = prompt ("Would you like any lowercase letters?");
+  var options = ["Yes", "No"]
+  if (option[0] === "Yes") {
+    console.log(options[0]);
+    alert(`Yes ${Password} ${generatePassword}`)
+  }
+  else 
+}
 // comfirm yes/no uppercase
 // comfirm yes/no numeric
 // comfirm yes/special characters
