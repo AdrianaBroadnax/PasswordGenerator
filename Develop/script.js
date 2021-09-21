@@ -1,25 +1,51 @@
-// Assignment Code
-// console.log (Password)
-// console.log (GeneratePassword);
-console.log({Password, generatePassword})
-var generateBtn = document.querySelector("#generate");
-// Write password to the #password input
-function Numbers (){
-  var length = prompt(" How many characters would you like to use in your password? It must be at least 8 characters and no more than 128 characters!" );
-  var min = 8
-  var max = 128;
-  // 8 < * > 128
-  if(length <8 * length >128){
-      alert("It must be between 8 and 128 characters")
-  }
-}
-// Comfirm characters wanted
+var letterUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   var letterUpA = letterUp.split("");
+   var letterLow = "abcdefghijklmnopqrstuvwxyz";
+   var letterLowA = letterLow.split("");
+   var number = "0123456789";
+   var numberA = number.split("");
+   var symbol = "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~";
+   var symbolA = symbol.split("");
 
-function writePassword() {
-  var password = generatePassword(
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
+   // Password Generate
+function generatePass(){
+    var characters = [];
+    var password = "";
+
+//  to begin
+window.onload = alert("Hello! Click 'Generate password' to get started!");
+
+// length of pass
+    var length = prompt("How many characters would you like in your password?");
+    if(length <8 || length > 128){
+        alert("oops! It must between 8 and 128 characters!");
+    }
+// needed to make the password
+    else{
+        if(confirm("Any upper case letters?")){
+            Array.prototype.push.apply(characters, lettersUpA);
+        }
+        if(confirm("What about lower case letters?")){
+            Array.prototype.push.apply(charcters, lettersLowA);
+        }
+        if(confirm("How about numbers?")){
+            Array.prototype.push.apply(characters, numberA);
+        }
+        if(confirm("Any symbols?")){
+            Array.prototype.push.apply(characters, symbolA);
+        }
+        if(characters.length===0){
+            alert("Please pick at LEAST one character!");
+        }
+// loop
+        else{
+            for(var i=0; i<length; i++){
+                var random = Math.floor(Math.random()*characters.length);
+                result += characters[random];
+            }
+        }
+        }
+// result
+        generateBtn.getElementById("password").innerHTML = result;
+   }
 }
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-// display alert  of what the password is
