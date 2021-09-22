@@ -76,5 +76,13 @@
             characterOptions = characterOptions.concat(useNumbers);
             characterMust.push(randomNumber(numberA))
         }
-        
-        const buttonElement = document.getElementById('btn')
+    }
+    function writePassword() {
+        var password = generatePassword();
+        var passwordText = document.querySelector("#password");
+      
+        passwordText.value = password;
+      
+      }
+    var generateBtn = document.querySelector("#generate");
+    generateBtn.addEventListener("click", writePassword);
