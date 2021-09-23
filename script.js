@@ -53,6 +53,7 @@
         return randomElement;
     }
     
+
     function generatePassword() {
         var userOptions = userInput();
 
@@ -76,7 +77,16 @@
             characterOptions = characterOptions.concat(useNumbers);
             characterMust.push(randomNumber(numberA))
         }
+        result[length] = characterMust [length]
+        result[letterUp] = characterMust [letterUpA]
+        result[letterLow] = characterMust [letterLowA]
+        result[symbol] = characterMust [symbolA]
+        result [number] = characterMust [symbolA];
+        return result.join('')
     }
+
+
+
     function writePassword() {
         var password = generatePassword();
         var passwordText = document.querySelector("#password");
@@ -84,5 +94,13 @@
         passwordText.value = password;
       
       }
+
+    //   function writePassword(){
+    //     var password = "";
+    //     var allowed = {};
+    //     if (num) password += random(allowed.num = "012345678");
+    //     if (abcLower) password += random(allowed.abcLower = "abcdefghijklmonpqrstuvwxyz");
+    //     if (abcUpper) password += random(allowed.abcUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    //     // if (sym) password += random(allowed.num = "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~");
     var generateBtn = document.querySelector("#generate");
     generateBtn.addEventListener("click", writePassword);
