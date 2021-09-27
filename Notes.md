@@ -1,3 +1,10 @@
+<!-- in the beginning of lesson on 9/27 around 30 min in, shows how to make for loop
+eaxample:
+
+<!-- for(var i = 0; i < lettertrack.length; i++) --> 
+
+
+
 var object = {
     key: value
 }
