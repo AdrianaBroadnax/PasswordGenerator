@@ -69,8 +69,8 @@
             characterOptions = characterOptions.concat(letterLowA);
             characterMust.push(randomNumber(letterLowA))
         }
-        if (userOptions.useSymbols){
-            characterOptions = characterOptions.concat(useSymbols);
+        if (userOptions.useSymbol){
+            characterOptions = characterOptions.concat(useSymbol);
             characterMust.push(randomNumber(symbolA))
         }
         if(userOptions.useNumbers){
@@ -94,7 +94,7 @@
         passwordText.value = password;
       
       }
-
+    // var result = characterMust[Math.floor(Math.random() * characterMust.length)];
     //   function writePassword(){
     //     var password = "";
     //     var allowed = {};
@@ -104,3 +104,4 @@
     //     // if (sym) password += random(allowed.num = "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~");
     var generateBtn = document.querySelector("#generate");
     generateBtn.addEventListener("click", writePassword);
+    var result = characterMust[Math.floor(Math.random() * characterMust.length)]; 
